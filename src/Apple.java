@@ -1,7 +1,12 @@
 public class Apple extends Fruit{
 
 	public Apple(){
-		System.out.println("I am an apple");
+		super(60,60,2);
 	}
+
+	public void show(){
+		System.out.println("I am a Apple");
+	}
+
 	
 }

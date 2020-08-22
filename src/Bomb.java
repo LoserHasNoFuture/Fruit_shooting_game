@@ -1,13 +1,13 @@
-public class Bomb{
-
-	int height;
-	int width;
-	int x; // x axis
-	int y; // y axis
+public class Bomb extends FlyingObject{
 	int speed;
 
 	public Bomb(){
-		System.out.println("I am a bomb");
+
+	}
+
+	public Bomb(int x, int y){
+		super(44,49,x,y);
+		speed = 2;
 	}
 	
 }

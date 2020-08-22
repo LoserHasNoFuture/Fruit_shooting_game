@@ -1,12 +1,13 @@
-public class Background{
-	int height;
-	int width;
-	int x; // x axis
-	int y; // y axis
+public class Background extends FlyingObject{
+
 	int y1; // second pic
 	int speed;
 
 	public Background(){
-		System.out.println("I am Background");
+		super(700,420,0,0);
+		speed = 1;
+		y1 = -700;
 	}
+
+
 }

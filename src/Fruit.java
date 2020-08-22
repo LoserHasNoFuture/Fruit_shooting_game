@@ -1,29 +1,22 @@
 import java.util.Random;
 
-public class Fruit{
-	int height;
-	int width;
-	int x; // x axis
-	int y; // y axis
+public class Fruit extends FlyingObject{
+
 	int speed;
 
 	public Fruit(){
 	}
 
-	public Fruit(int height, int width){
-		Random ran = new Random().
-		this.height = height;
-		this.width = width;
-		x = 
-
+	public Fruit(int height, int width, int speed){
+		Random ran = new Random();
+		super(height,width,ran.nextInt(420-width),-width);
+		this.speed = speed;
 	}
 
-	public Fruit(int height, int width, int x, int y){
-		this.height = height;
-		this.width = width;
-		this.x = x;
-		this.y = y;
+	public void show(){
+		System.out.println("I am a Fruit");
 	}
+
 
 
 

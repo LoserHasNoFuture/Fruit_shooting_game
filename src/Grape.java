@@ -1,7 +1,12 @@
 public class Grape extends Fruit{
 
 	public Grape(){
-		System.out.println("I am a grape");
+		super(63,62,2);
 	}
+
+	public void show(){
+		System.out.println("I am a Grape");
+	}
+
 	
 }
