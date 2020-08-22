@@ -1,18 +1,24 @@
-public class Game{
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+
+public class Game extends JPanel{
 	
+	public Game(){
+		// instanize a window
+		JFrame jf = new JFrame("Shooting Fruits");
+		// put this game into window;
+		jf.add(this);
+		// set the size of window;
+		jf.setSize(420,700);
+		// when you click close bottom, the program is terminated
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// 设置窗口居中
+		jf.setLocationRelativeTo(null);
+		// 窗口显示
+		jf.setVisible(true);
+	}
+
 	public void start(){
-		Background backgournd = new Background();
-		Cannon cannon = new Cannon();
-		Bomb[] bombs = new Bomb[10];
-		bombs[0] = new Bomb();
-
-		Fruit[] fruits = new Fruit[4];
-		fruits[0] = new Apple();
-		fruits[1] = new Pineapple();
-		fruits[2] = new Cherry();
-		fruits[3] = new Grape();
-
-		for(int i = 0; i < fruits.length; i++)
-			fruits[i].show();
+		
 	}
 }

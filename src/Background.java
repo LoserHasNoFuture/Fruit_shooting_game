@@ -1,7 +1,7 @@
 public class Background extends FlyingObject{
 
-	int y1; // second pic
-	int speed;
+	private int y1; // second pic
+	private int speed;
 
 	public Background(){
 		super(700,420,0,0);

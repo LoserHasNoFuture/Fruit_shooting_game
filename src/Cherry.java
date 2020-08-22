@@ -1,5 +1,5 @@
 public class Cherry extends Fruit{
-	int xspeed;
+	private int xspeed;
 
 	public Cherry(){
 		super(62,60,2);

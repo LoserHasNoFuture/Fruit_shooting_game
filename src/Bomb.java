@@ -1,5 +1,5 @@
 public class Bomb extends FlyingObject{
-	int speed;
+	private int speed;
 
 	public Bomb(){
 

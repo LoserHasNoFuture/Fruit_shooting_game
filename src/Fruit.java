@@ -2,14 +2,16 @@ import java.util.Random;
 
 public class Fruit extends FlyingObject{
 
-	int speed;
+	protected int speed;
 
 	public Fruit(){
 	}
 
 	public Fruit(int height, int width, int speed){
+		super(height,width);
 		Random ran = new Random();
-		super(height,width,ran.nextInt(420-width),-width);
+		this.x = ran.nextInt(420-width);
+		this.y = -width;
 		this.speed = speed;
 	}
 

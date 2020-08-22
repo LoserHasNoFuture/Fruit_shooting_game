@@ -1,14 +1,16 @@
 public class Cannon extends FlyingObject{
 
-	int life;
-	int doubleFire;
+	private int life;
+	private int doubleFire;
+	private final int y = -500;
 
 	public Cannon(){
 
 	}
 
 	public Cannon(int x, int y){
-		super(159,314,x,y);
+		super(159,314);
+		this.x = x;
 		life = 3;
 		// double fire is set as default
 	}
