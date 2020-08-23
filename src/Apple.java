@@ -1,8 +1,6 @@
 import java.awt.image.BufferedImage;
-public class Apple extends Fruit{
-	public static final int WIDTH = 60;
-	public static final int HEIGHT = 60;
-	public static final int SPEED = 20;
+public class Apple extends Fruit implements Point{
+
 	private static BufferedImage img;
 
 	static{
@@ -11,7 +9,7 @@ public class Apple extends Fruit{
 
 
 	public Apple(){
-		super(Apple.HEIGHT,Apple.WIDTH,Apple.SPEED);
+		super(60,60,20,15);
 	}
 
 
@@ -20,4 +18,7 @@ public class Apple extends Fruit{
 		else return null;
 	}
 	
+	public int getPoint(){
+		return this.score;
+	}
 }

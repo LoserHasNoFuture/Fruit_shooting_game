@@ -66,5 +66,18 @@ public abstract class FlyingObject{
 		return this.status == FlyingObject.REMOVED;
 	}
 
+	public void goDie(){
+		this.status = FlyingObject.DEAD;
+	}
+
+	public boolean isHit(FlyingObject f){
+		int x1=f.x-this.width;
+		int x2=f.x+f.width;
+		int y1=f.y-this.height;
+		int y2=f.y+f.height;
+		return this.x>x1 && this.x<x2
+				&&
+		       this.y>y1 && this.y<y2;
+	}
 
 }

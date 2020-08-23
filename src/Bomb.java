@@ -1,9 +1,8 @@
 import java.awt.image.BufferedImage;
 
 public class Bomb extends FlyingObject{
-	public static final int speed = 14;
+	public static final int speed = 20;
 	public static final int WIDTH = 44;
-	public static final int HEIGHT = 40;
 
 	private static BufferedImage[] imgs;
 
@@ -19,7 +18,7 @@ public class Bomb extends FlyingObject{
 	}
 
 	public Bomb(int x, int y){
-		super(Bomb.HEIGHT,Bomb.WIDTH,x,y);
+		super(40,44,x,y);
 	}
 
 	int index = 0;
@@ -28,6 +27,7 @@ public class Bomb extends FlyingObject{
 		if(isDead()){
 			index++;
 			if(index < this.imgs.length) return this.imgs[index];
+			else this.status = 2;
 		}
 		return null;
 	}
@@ -35,4 +35,8 @@ public class Bomb extends FlyingObject{
 	public void move(){
 		this.y -= this.speed;
 	}	
+
+	public boolean isOutOfBoundary(){
+		return (this.y < -this.width);
+	}
 }

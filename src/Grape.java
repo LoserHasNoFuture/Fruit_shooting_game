@@ -1,8 +1,6 @@
 import java.awt.image.BufferedImage;
-public class Grape extends Fruit{
-	public static final int WIDTH = 80;
-	public static final int HEIGHT = 82;
-	public static final int SPEED = 26;
+public class Grape extends Fruit implements Point{
+
 	private static BufferedImage img;
 
 	static{
@@ -10,11 +8,15 @@ public class Grape extends Fruit{
 	}
 
 	public Grape(){
-		super(Grape.HEIGHT,Grape.WIDTH,Grape.SPEED);
+		super(82,80,25,10);
 	}
 
 	public BufferedImage getImage(){
 		if(isAlive()) return this.img;
 		else return null;
+	}
+
+	public int getPoint(){
+		return this.score;
 	}
 }

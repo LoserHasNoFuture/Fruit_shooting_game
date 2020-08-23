@@ -1,10 +1,7 @@
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
-public class Cherry extends Fruit{
-	public static final int WIDTH = 30;
-	public static final int HEIGHT = 31;
-	public static final int SPEED = 30;
-	public static final int XSPEED = 30;
+public class Cherry extends Fruit implements Bonus,Point{
 
 	private int xspeed;
 	private static BufferedImage img;
@@ -15,8 +12,8 @@ public class Cherry extends Fruit{
 	}
 
 	public Cherry(){
-		super(Cherry.HEIGHT,Cherry.WIDTH,Cherry.SPEED);
-		this.xspeed = Cherry.XSPEED;
+		super(31,30,30,50);
+		this.xspeed = 30;
 	}
 
 
@@ -28,6 +25,15 @@ public class Cherry extends Fruit{
 	public void move(){
 		this.y += this.speed;
 		this.x += this.xspeed;
-		if(x <= 0 || x >= Game.WIDTH - Cherry.WIDTH) this.xspeed = -this.xspeed;
+		if(x <= 0 || x >= Game.WIDTH - this.width) this.xspeed = -this.xspeed;
+	}
+
+	public int getBonus(){
+		Random ran = new Random();
+		return ran.nextInt(2);
+	}
+
+	public int getPoint(){
+		return this.score;
 	}
 }
